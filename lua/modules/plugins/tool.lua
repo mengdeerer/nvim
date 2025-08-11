@@ -73,8 +73,9 @@ tool["gelguy/wilder.nvim"] = {
 	dependencies = "romgrk/fzy-lua-native",
 }
 if settings.use_chat then
-	tool["CopilotC-Nvim/CopilotChat.nvim"] = require("modules.configs.tool.CopilotChat")
+    tool["CopilotC-Nvim/CopilotChat.nvim"] = require("modules.configs.tool.CopilotChat")
 end
+tool["nosduco/remote-sshfs.nvim"]=require("modules.configs.tool.remote-sshfs")
 -- Needs `fzf` installed and in $PATH
 tool["ibhagwan/fzf-lua"] = {
 	lazy = true,
@@ -146,5 +147,7 @@ tool["mfussenegger/nvim-dap"] = {
 		},
 	},
 }
+
+
 
 return tool
