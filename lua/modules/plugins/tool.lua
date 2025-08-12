@@ -145,6 +145,7 @@ tool["mfussenegger/nvim-dap"] = {
 			dependencies = "nvim-neotest/nvim-nio",
 			config = require("tool.dap.dapui"),
 		},
+		{ "theHamsta/nvim-dap-virtual-text" },
 	},
 }
 

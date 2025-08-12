@@ -2,6 +2,10 @@ return function()
 	local dap = require("dap")
 	local dapui = require("dapui")
 	local mason_dap = require("mason-nvim-dap")
+    local dap_virtual_text = require("nvim-dap-virtual-text")
+	-- Setup dap-virtual-text
+	dap_virtual_text.setup()		
+
 
 	local icons = { dap = require("modules.utils.icons").get("dap") }
 	local colors = require("modules.utils").get_palette()
@@ -17,6 +21,7 @@ return function()
 	local function debug_terminate_cb()
 		if _debugging then
 			_G._debugging = false
+			dapui.close()
 		end
 	end
 	local function debug_disconnect_cb()
